@@ -183,6 +183,9 @@
 	}
 
 	@media screen and (max-width: 736px) {
+		select {
+			width: 180px;
+		}
 		p{
 			font-size: 1.5em;
 			line-height: 1.75;
