@@ -54,3 +54,21 @@ function changecat(value) {
   document.getElementById("ward").innerHTML = wardOptions;
   }
 }
+
+
+function selectId(name) {
+  return document.getElementById(name);
+}
+
+selectId("onSubmit").onclick = function(e){
+  var heading = selectId("heading");
+  heading.style.color = "#00764d";
+  heading.innerHTML = "पंजीकरण करने के लिए धन्यवाद";
+  selectId("areaName").innerHTML = "<p>आपका क्षेत्र:   " + "<strong>" + selectId("area").value + "</strong> </p>";
+  selectId("wardName").innerHTML = "<p>आपका वार्ड:   " + "<strong>" + selectId("ward").value + "</strong> </p>";
+  selectId("onSubmit").style.display = "none";
+  var tert = document.createElement("h2");
+  console.log(tert)
+  tert.innerHTML = "हम इस मंच के माध्यम से आपके साथ लगातार संपर्क में रहेंगे";
+  document.getElementById("contentBox").append(tert);
+}

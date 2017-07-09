@@ -49,8 +49,12 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	label {
+	.inlineText {
 		display: inline-block;
+	}
+
+	label {
+		display: block;
 	}
 	select {
 		-webkit-appearance: button;
@@ -155,6 +159,10 @@
 	}
 
 	@media screen and (max-width: 736px) {
+		p{
+			font-size: 1.5em;
+			line-height: 1.75;
+		}
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -656,7 +664,7 @@
 	@media screen and (min-width: 737px) and (max-width: 1200px) {
 
 		.row > * {
-			padding: 25px 0 0 25px;
+			padding: 25px 25px 0 25px;
 		}
 
 		.row {
@@ -1157,7 +1165,7 @@
 	}
 
 	h2, h3, h4, h5, h6 {
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	h1 {
@@ -1370,8 +1378,8 @@
 		border-radius: 8px;
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
+		box-shadow: inset 0px 0px 0px 1px rgba(155, 150, 150, 0.5), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.75);
+    background-color: #43bff0;
 	}
 
 		input[type="button"]:hover,
@@ -1750,6 +1758,7 @@
 			h2 {
 				font-size: 2em;
 				letter-spacing: -0.015em;
+				line-height: 1.2em;
 			}
 
 			h3 {
@@ -1795,8 +1804,11 @@
 			input[type="reset"],
 			button,
 			.button {
-				padding: 1.5em;
-				font-size: 1.5em;
+				padding: 16px 20px;
+		    font-size: 1.5em;
+		    text-align: center;
+		    width: 58%;
+		    margin-top: 20px;
 			}
 
 				input[type="button"].big,
@@ -1842,7 +1854,7 @@
 			}
 
 				.wrapper.first {
-					padding-top: 8em;
+					padding-top: 4em;
 				}
 
 		/* Nav */
@@ -1943,7 +1955,7 @@
 			}
 
 				.wrapper.first {
-					padding-top: 9em;
+					padding-top: 5em;
 				}
 
 				.wrapper.style4 .row-special {
@@ -2084,7 +2096,7 @@
 			}
 
 				.wrapper.first {
-					padding-top: 5em;
+					padding-top: 3em;
 				}
 
 		/* Nav */

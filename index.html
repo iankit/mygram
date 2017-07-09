@@ -18,12 +18,12 @@
 						<div class="4u 12u(mobile)">
 							<span class="image fit"><img src="images/LOGO.jpg" alt="" /></span>
 						</div>
-						<div class="8u 12u(mobile)">
+						<div class="8u 12u(mobile)" id="contentBox">
 							<header>
-								<h1><strong>दिल्ली NCR</strong> शीघ्र प्रतिक्रिया मंच पर आपका स्वागत है।</h1>
+								<h1 id="heading"><strong>दिल्ली NCR</strong> शीघ्र प्रतिक्रिया मंच पर आपका स्वागत है।</h1>
 							</header>
 							<p>आपका पंजीकृत मोबाइल नंबर है: <strong id="phoneNumber"></strong></p>
-							<label for="area">कृपया अपना क्षेत्र चुनें
+							<label for="area" id="areaName"><p class="inlineText">कृपया अपना क्षेत्र चुनें:</p>
 								<select name="area" id="area" onChange="changecat(this.value);">
 							    <option value="" disabled selected>Select Area</option>
 							    <option value="NorthDelhi">North Delhi</option>
@@ -31,12 +31,21 @@
 							    <option value="EastDelhi">East Delhi</option>
 								</select>
 							</label>
-							<label for="ward">कृपया अपना वार्ड चुनें
+							<label for="ward" id="wardName"><p class="inlineText">कृपया अपना वार्ड चुनें:</p>
 								<select name="ward" id="ward">
 							    <option value="" disabled selected>Select Ward</option>
 								</select>
 							</label>
-							<!-- <a href="" class="button">Submit</a> -->
+							<div for="wardPerson" class="row" id="wardName">
+								<div for="wardPerson" class="4u 12u(mobile)">
+									<p style="margin-top: 30px;">आपके वार्ड पार्षद: </p>
+								</div>
+								<div class="8u 12u(mobile)">
+									<img src="images/dummy.jpeg" alt="Ward Councillor" class="wardImage">
+									<h4>Suraj Kumar</h4>
+								</div>
+							</div>
+							<a id="onSubmit" class="button">Submit</a>
 						</div>
 					</div>
 				</article>
