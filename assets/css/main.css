@@ -76,6 +76,30 @@
     white-space: nowrap;
     width: 300px;
 	}
+	.getInformations {
+		border: 1px solid gray;
+    padding: 40px;
+    margin-bottom: 40px;
+    display: block;
+	}
+
+	.wardImage{
+		max-height: 100px;
+	}
+
+	.resultData {
+		padding-left: 15px;
+		text-transform: capitalize;
+	}
+	#errorMsg {
+		font-size: 1em;
+    text-align: center;
+    color: red;
+	}
+
+	.wardPerson {
+		margin-top: 30px;
+	}
 
 /* Containers */
 
@@ -162,6 +186,12 @@
 		p{
 			font-size: 1.5em;
 			line-height: 1.75;
+		}
+		.ward-person {
+			margin-top: 10px;
+		}
+		.getInformations {
+			padding: 10px;
 		}
 
 		.container.\31 25\25 {
@@ -453,7 +483,7 @@
 		}
 
 		.row {
-			margin: -25px 0 -1px -25px;
+			margin: -25px 0 -25px -25px;
 		}
 
 		.row.uniform > * {
@@ -1164,8 +1194,19 @@
 		color: inherit;
 	}
 
-	h2, h3, h4, h5, h6 {
+	h2, h3, h4, h6 {
 		font-weight: 500;
+	}
+	h5 {
+		font-weight: 800;
+	}
+	h3.subFooter {
+		text-align: center;
+	}
+	h2.footerText {
+		text-align: center;
+		font-weight: 900;
+		color: rgb(0, 118, 77);
 	}
 
 	h1 {
@@ -1380,6 +1421,8 @@
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(155, 150, 150, 0.5), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.75);
     background-color: #43bff0;
+    margin: 25px auto;
+    padding-top: 20px;
 	}
 
 		input[type="button"]:hover,
@@ -1767,11 +1810,11 @@
 			}
 
 			h1, h2, h3, h4, h5, h6 {
-				margin: 0 0 0.75em 0;
+				margin: 0 0 0.25em 0;
 			}
 
 			header {
-				margin: 0 0 3em 0;
+				margin: 0 0 1em 0;
 			}
 
 				header > p {
@@ -1854,7 +1897,7 @@
 			}
 
 				.wrapper.first {
-					padding-top: 4em;
+					padding-top: 3em;
 				}
 
 		/* Nav */
@@ -1944,7 +1987,7 @@
 			}
 
 			header {
-				margin: 0 0 4em 0;
+				margin: 0 0 2em 0;
 			}
 
 		/* Wrappers */
@@ -1955,7 +1998,7 @@
 			}
 
 				.wrapper.first {
-					padding-top: 5em;
+					padding-top: 3em;
 				}
 
 				.wrapper.style4 .row-special {
@@ -1996,7 +2039,7 @@
 			}
 
 			header {
-				margin: 0 0 2em 0;
+				margin: 0 0 1em 0;
 			}
 
 				header > p {
