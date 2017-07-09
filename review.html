@@ -13,7 +13,7 @@
 
     <!-- Home -->
       <div class="wrapper style1 first">
-        <article class="container" id="top">
+        <div class="container" id="top">
           <div class="row">
             <div class="4u 12u(mobile)">
               <span class="image fit"><img src="images/LOGO.jpg" alt="" /></span>
@@ -22,9 +22,10 @@
               <header>
                 <h1 id="heading"><strong>दिल्ली NCR</strong> शीघ्र प्रतिक्रिया मंच</h1>
               </header>
-              <div class="getInformations">
-                <p>हमने हाल ही में आपके क्षेत्र में सड़क का काम पूरा किया है|</p>
-                <p class="inlineText">कृपया गुणवत्ता को 1 से 5 तक रेट करें</p>
+              <div class="getInformations" id="reviewBody">
+                <h3 class="reviewSubHeading">हमने हाल ही में आपके क्षेत्र में सड़क का काम पूरा किया है</h3>
+                <hr>
+                <p class="reviewSubHeading">कृपया गुणवत्ता को 1 से 5 तक रेट करें</p>
                 <div class="ratingSection">
                   <p class="ratingText">काम से पहले गुणवत्ता</p>
                   <fieldset class="rating one">
@@ -76,12 +77,14 @@
                   </fieldset>
                 </div>
                 <p id="errorMsg"></p>
-                <a id="onSubmit" class="button">Submit</a>
+                <a id="onReviewSubmit" class="button">Submit</a>
               </div>
             </div>
           </div>
-        </article>
+        </div>
       </div>
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/review.js"></script>
     <!-- Scripts -->
   </body>
 </html>

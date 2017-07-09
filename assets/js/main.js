@@ -47,14 +47,13 @@ function changeArea(value) {
   }
   if (value.length == 0) document.getElementById("ward").innerHTML = "<option></option>";
   else {
-    var wardOptions = "<option disabled selected>Select Ward</option>";
+    var wardOptions = "<option value=\"\" disabled selected>Select Ward</option>";
     for (categoryId in wardsOfDelhi[value]) {
       wardOptions += "<option>" + wardsOfDelhi[value][categoryId] + "</option>";
     }
   document.getElementById("ward").innerHTML = wardOptions;
   }
 }
-
 
 function selectId(name) {
   return document.getElementById(name);
@@ -80,31 +79,32 @@ function fetchWardPerson(area, ward) {
 selectId("onSubmit").onclick = function(e){
   var areaValue = selectId("area").value;
   var wardValue = selectId("ward").value;
-  if (!areaValue || !wardValue) {
+  if (areaValue && wardValue) {
+    var heading = selectId("heading");
+    heading.style.color = "#00764d";
+    heading.innerHTML = "पंजीकरण करने के लिए धन्यवाद";
+    fetchWardPerson(areaValue,wardValue);
+    selectId("areaName").innerHTML = `<p>आपका क्षेत्र:<strong class="resultData">${areaValue.replace(/([A-Z])/g, ' $1').trim()}</strong> </p>`;
+    selectId("wardName").innerHTML = `<p>आपका वार्ड:<strong class="resultData">${wardValue}</strong> </p>`;
+    selectId("onSubmit").style.display = "none";
+    selectId("wardPerson").innerHTML =
+      `<div class="3u 4u(tablet) 12u(mobile)">
+          <p class="wardPerson">वार्ड पार्षद: </p>
+        </div>
+        <div class="4u 12u(mobile)">
+          <img src="images/dummy.jpeg" alt="Ward Councillor" class="wardImage">
+          <h5>${councillor}</h5>
+        </div>`;
+    var subFooterText = document.createElement("h3");
+    subFooterText.className = "subFooter";
+    subFooterText.innerHTML = "हम इस मंच के माध्यम से आपके साथ लगातार संपर्क में रहेंगे";
+    document.getElementById("contentBox").append(subFooterText);
+    var namaste = document.createElement("h2");
+    namaste.className = "footerText";
+    namaste.innerHTML = `धन्यवाद`;
+    document.getElementById("contentBox").append(namaste);
+  } else {
+    console.log(areaValue, wardValue, "values")
     selectId("errorMsg").innerHTML = "कृपया क्षेत्र और वार्ड दोनों दर्ज करें";
-    return;
   }
-  var heading = selectId("heading");
-  heading.style.color = "#00764d";
-  heading.innerHTML = "पंजीकरण करने के लिए धन्यवाद";
-  fetchWardPerson(areaValue,wardValue);
-  selectId("areaName").innerHTML = `<p>आपका क्षेत्र:<strong class="resultData">${areaValue.replace(/([A-Z])/g, ' $1').trim()}</strong> </p>`;
-  selectId("wardName").innerHTML = `<p>आपका वार्ड:<strong class="resultData">${wardValue}</strong> </p>`;
-  selectId("onSubmit").style.display = "none";
-  selectId("wardPerson").innerHTML =
-    `<div class="3u 4u(tablet) 12u(mobile)">
-        <p class="wardPerson">वार्ड पार्षद: </p>
-      </div>
-      <div class="4u 12u(mobile)">
-        <img src="images/dummy.jpeg" alt="Ward Councillor" class="wardImage">
-        <h5>${councillor}</h5>
-      </div>`;
-  var subFooterText = document.createElement("h3");
-  subFooterText.className = "subFooter";
-  subFooterText.innerHTML = "हम इस मंच के माध्यम से आपके साथ लगातार संपर्क में रहेंगे";
-  document.getElementById("contentBox").append(subFooterText);
-  var namaste = document.createElement("h2");
-  namaste.className = "footerText";
-  namaste.innerHTML = `नमस्ते`;
-  document.getElementById("contentBox").append(namaste);
 }

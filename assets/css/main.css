@@ -96,7 +96,14 @@
     text-align: center;
     color: red;
 	}
-
+	.reviewSubHeading {
+		font-weight: 800;
+		text-align: center;
+	}
+	.reviewHeader {
+		color: rgb(0, 118, 77);
+		text-align: center;
+	}
 	.wardPerson {
 		margin-top: 30px;
 	}
@@ -120,9 +127,9 @@
    it doesn’t make the test unnecessarily selective */
 .rating:not(:checked) > input {
     position:absolute;
-    top:-9999px;
     clip:rect(0,0,0,0);
-}
+    visibility: hidden;
+  }
 
 .rating:not(:checked) > label {
     float:right;
@@ -146,7 +153,7 @@
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: gold;
+    color: #f70;
 }
 
 .rating > input:checked + label:hover,
@@ -1305,7 +1312,7 @@
 		border-top-color: rgba(0, 0, 0, 0.35);
 		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
 		height: 1px;
-		margin: 3em 0 4em 0;
+		margin: 1em 0 1em 0;
 	}
 
 	p, ul, ol, dl, table {
@@ -1869,7 +1876,7 @@
 			}
 
 			h3 {
-				font-size: 1.5em;
+				font-size: 1.70em;
 				letter-spacing: -0.015em;
 			}
 
