@@ -17,7 +17,7 @@ document.getElementById("phoneNumber").innerHTML = "+91 " + phone;
 function loadJSON(callback) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
-  xobj.open('GET', '../data/data.json', true);
+  xobj.open('GET', 'https://raw.githubusercontent.com/iankit/mygram/master/assets/data/data.json', true);
   xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
