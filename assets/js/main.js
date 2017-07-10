@@ -17,7 +17,7 @@ document.getElementById("phoneNumber").innerHTML = "+91 " + phone;
 function loadJSON(callback) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
-  xobj.open('GET', 'https://api.myjson.com/bins/keokn', true);
+  xobj.open('GET', '../data/data.json', true);
   xobj.onreadystatechange = function() {
       if (xobj.readyState == 4 && xobj.status == "200") {
         callback(xobj.responseText);
@@ -103,6 +103,7 @@ selectId("onSubmit").onclick = function(e){
     namaste.className = "footerText";
     namaste.innerHTML = `धन्यवाद`;
     document.getElementById("contentBox").append(namaste);
+    selectId("errorMsg").innerHTML = "";
   } else {
     console.log(areaValue, wardValue, "values")
     selectId("errorMsg").innerHTML = "कृपया क्षेत्र और वार्ड दोनों दर्ज करें";
